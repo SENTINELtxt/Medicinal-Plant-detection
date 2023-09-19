@@ -1,0 +1,32 @@
+/* Basic CSS styles ... (previous styles) */
+
+/* Hover effect for buttons */
+#upload-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Scale up the button on hover */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Hover effect for sample images */
+.sample-image:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a subtle shadow on hover */
+    transition: box-shadow 0.3s;
+}
+
+/* Hover effect for navigation links */
+.navbar a:hover {
+    color: #007bff; /* Change link color on hover */
+    transition: color 0.3s;
+}
+
+/* Hover effect for headers */
+h2:hover {
+    color: #007bff; /* Change header color on hover */
+    transition: color 0.3s;
+}
+
+/* Hover effect for the identified plant name */
+#identified-plant:hover {
+    transform: scale(1.05); /* Scale up the identified plant name on hover */
+    transition: transform 0.3s;
+}

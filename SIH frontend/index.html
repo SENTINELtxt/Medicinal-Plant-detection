@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicinal Plant Identification</title>
+</header>
+<div class="container">
+    <h2>About the Project</h2>
+    <p>
+        Welcome to the "Identification of Medicinal Plants" project! Our mission is to provide a powerful tool that harnesses the capabilities of machine learning to make the identification of medicinal plants easy and accessible to everyone.
+    </p>
+    <p>
+        Medicinal plants have been used for centuries to treat various ailments, but the accurate identification of these plants can be challenging, especially for those who are not experts in botany. Our project leverages state-of-the-art machine learning algorithms, specifically convolutional neural networks (CNNs), to simplify this process.
+    </p>
+    <h2>Future Aspects</h2>
+    <p>
+        The future of this project holds exciting possibilities:
+        <ul>
+            <li><strong>Enhanced Accuracy:</strong> We are continuously improving our machine learning models to achieve even higher accuracy in plant identification. This will result in more reliable and trustworthy results for users.</li>
+            <li><strong>Mobile App Integration:</strong> We plan to develop a mobile application that allows users to identify medicinal plants on the go. This will enable nature enthusiasts, herbalists, and researchers to access our tool from their smartphones.</li>
+            <li><strong>Plant Database Expansion:</strong> We are working on expanding our plant database to include a wider variety of medicinal plants from different regions, ensuring that users can identify plants relevant to their location.</li>
+        </ul>
+    </p>
+    <h2>Benefits for Users</h2>
+    <p>
+        Our project offers several benefits to users:
+        <ul>
+            <li><strong>Quick and Accurate Identification:</strong> Users can identify medicinal plants within seconds, reducing the risk of misidentification and promoting safe plant usage.</li>
+            <li><strong>Education and Awareness:</strong> Whether you are a student, herbalist, or nature enthusiast, our tool provides an educational platform to learn about the diverse world of medicinal plants.</li>
+            <li><strong>Conservation:</strong> By promoting responsible plant identification and usage, we contribute to the conservation of medicinal plant species, especially those that are endangered.</li>
+        </ul>
+    </p>
+    <style>
+        /* Basic CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            background-opacity: 0.8; /* Adjust opacity as needed */
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px solid #007bff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: #007bff;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #333;
+        }
+        /* Style for the image upload button */
+        #upload-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 18px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #upload-button:hover {
+            background-color: #0056b3;
+        }
+        /* Style for the sample images */
+        .sample-image {
+            max-width: 100%;
+            max-height: 300px; /* Adjust the max height as needed */
+            display: block;
+            margin: 0 auto 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Identification of Medicinal Plants</h1>
+    </header>
+    <div class="container">
+        <!-- ... (Other sections as before) -->
+
+        <h2>Sample Images</h2>
+        <div>
+            <img src="plant1.jpg" alt="Medicinal Plant 1" class="sample-image">
+            <p>Medicinal Plant 1</p>
+        </div>
+        <div>
+            <img src="plant2.jpg" alt="Medicinal Plant 2" class="sample-image">
+            <p>Medicinal Plant 2</p>
+        </div>
+        <!-- Add more sample images and descriptions as needed -->
+
+        <!-- Image Upload Button -->
+        <input type="file" id="file-input" style="display:none;">
+        <label for="file-input" id="upload-button">Upload an Image</label>
+    </div>
+     <!-- Display Identified Plant Name -->
+     <div id="identified-plant">
+        <h2>Identified Plant Name:</h2>
+        <p id="plant-name-placeholder">Awaiting identification...</p>
+    </div>
+</div>
+<style>
+    /* Basic CSS styles ... (previous styles) */
+
+    /* Loading bar styles */
+    #loading-bar-container {
+        width: 100%;
+        text-align: center;
+        display: none; /* Hide the container initially */
+    }
+
+    #loading-bar {
+        width: 100%;
+        height: 4px;
+        background-color: #ccc;
+        position: relative;
+    }
+
+    #progress-bar {
+        width: 0;
+        height: 100%;
+        background-color: #007bff;
+        position: absolute;
+        transition: width 0.3s ease-in-out;
+    }
+</style>
+
+<!-- JavaScript -->
+<script>
+    // JavaScript code for handling image upload and identification
+    document.getElementById('file-input').addEventListener('change', function() {
+        // Assuming you have a function for image recognition
+        // Replace the following line with your actual logic to identify the plant
+        const identifiedPlantName = identifyPlant(this.files[0]);
+
+        // Display the identified plant name
+        document.getElementById('plant-name-placeholder').textContent = identifiedPlantName;
+    });
+
+    // Placeholder function for image recognition (replace with your implementation)
+    function identifyPlant(imageFile) {
+        // Simulate image recognition process
+        // Replace this with actual code for identifying the plant
+        // You may need to use a backend API or a machine learning library like TensorFlow.js
+        // For simplicity, we're just returning a placeholder name here
+        return "Sample Identified Plant";
+    }
+</script>
+
+    <!-- JavaScript can be added here to handle image processing and interactions -->
+    <h2>Project Team</h2>
+<ul>
+    <li><strong>Debanjan Mukherjee</strong> - Project Lead</li>
+    <li><strong>Sauptik Mukherjee</strong> - Machine Learning Specialist</li>
+    <li><strong>Aritra Samanta</strong> - Web Developer</li>
+    <li><strong>Abhilash Sinha,Pritha Karmakar,Astik Mondal</strong> - other contributors</li>
+    <!-- Add more team members as needed -->
+</ul>
+
+<!-- ... (Closing tags) -->
+</body>
+</html>
