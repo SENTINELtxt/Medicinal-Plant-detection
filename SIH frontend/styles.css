@@ -30,3 +30,63 @@ h2:hover {
     transform: scale(1.05); /* Scale up the identified plant name on hover */
     transition: transform 0.3s;
 }
+/* Basic CSS styles (common to all pages) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: #007bff;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Additional styles specific to each page can be added here */

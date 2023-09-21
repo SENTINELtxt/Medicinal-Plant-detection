@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicinal Plant Identification</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Identification of Medicinal Plants</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="main.html">Main Application</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Main Application</h2>
+        <!-- Image Upload Form -->
+        <form id="upload-form">
+            <input type="file" id="file-input" style="display:none;">
+            <label for="file-input" id="upload-button">Upload an Image</label>
+        </form>
+        
+        <!-- Loading Bar Container -->
+        <div id="loading-bar-container">
+            <div id="loading-bar">
+                <div id="progress-bar"></div>
+            </div>
+        </div>
+        
+        <!-- Display Identified Plant Name -->
+        <div id="identified-plant" style="display: none;">
+            <h3>Identified Plant Name:</h3>
+            <p id="plant-name-placeholder">Awaiting identification...</p>
+        </div>
+    </div>
+</body>
+</html>
